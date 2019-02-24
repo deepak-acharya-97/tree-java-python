@@ -8,6 +8,10 @@ public class DSA {
 		// TODO Auto-generated method stub
 		Node root = TreeDefinition.getSampleTree();	
 		printBst(root);
+		ContinuosTree continuosTree=new ContinuosTree();
+		boolean result = continuosTree.isContinuos(TreeDefinition.getSampleContinuousTree());
+		result=continuosTree.isContinuos(root);
+		Utility.Print(result);
 	}
 	
 	private static void printBst(Node root) {
