@@ -10,6 +10,10 @@ public class Common {
 		public static <T> boolean isNotNull(T obj) {
 			return (obj != null);
 		}
+		
+		public static <T> boolean isNull(T obj) {
+			return (obj == null);
+		}
 	}
 
 }

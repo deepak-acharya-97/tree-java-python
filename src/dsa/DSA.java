@@ -19,5 +19,4 @@ public class DSA {
 		printBst(root.getLeft());
 		printBst(root.getRight());
 	}
-
 }
