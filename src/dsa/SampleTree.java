@@ -15,5 +15,19 @@ public class SampleTree {
 			root.getRight().setRight(new Node(5));
 			return root;
 		}
+		
+		public static Node getSampleFoldableTree() {
+			Node root=new Node(10, new Node(7), new Node(15));
+			root.getLeft().setRight(new Node(9));
+			root.getRight().setLeft(new Node(11));
+			return root;
+		}
+		
+		public static Node getSampleNonFoldableTree() {
+			Node root=new Node(10, new Node(7), new Node(15));
+			root.getLeft().setLeft(new Node(9));
+			root.getRight().setLeft(new Node(11));
+			return root;
+		}
 	}
 }

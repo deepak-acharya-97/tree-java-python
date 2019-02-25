@@ -6,12 +6,13 @@ public class DSA {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Node root = TreeDefinition.getSampleTree();	
-		printBst(root);
-		ContinuosTree continuosTree=new ContinuosTree();
-		boolean result = continuosTree.isContinuos(TreeDefinition.getSampleContinuousTree());
-		result=continuosTree.isContinuos(root);
-		Utility.Print(result);
+		/*
+		 * Node root = TreeDefinition.getSampleTree(); printBst(root); ContinuosTree
+		 * continuosTree=new ContinuosTree(); boolean result =
+		 * continuosTree.isContinuos(TreeDefinition.getSampleContinuousTree());
+		 * result=continuosTree.isContinuos(root); Utility.Print(result);
+		 */
+		Utility.Print(new FoldableBinaryTree().isFoldable(TreeDefinition.getSampleNonFoldableTree()));
 	}
 	
 	private static void printBst(Node root) {
