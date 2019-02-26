@@ -12,7 +12,9 @@ public class DSA {
 		 * continuosTree.isContinuos(TreeDefinition.getSampleContinuousTree());
 		 * result=continuosTree.isContinuos(root); Utility.Print(result);
 		 */
-		Utility.Print(new FoldableBinaryTree().isFoldable(TreeDefinition.getSampleNonFoldableTree()));
+		//Utility.Print(new FoldableBinaryTree().isFoldable(TreeDefinition.getSampleNonFoldableTree()));
+		char[] postfixCharArray = "ab+ef*g*-".toCharArray();
+		printBst(new GenerateExpressionTree().generateExpressionTree(postfixCharArray));
 	}
 	
 	private static void printBst(Node root) {
@@ -20,8 +22,18 @@ public class DSA {
 		if(!Utility.isNotNull(root)) {
 			return;
 		}
-		Utility.Print(root.getData());
 		printBst(root.getLeft());
+		Utility.Print(root.getData());
+		printBst(root.getRight());
+	}
+	
+	private static void printBst(NodeChar root) {
+		// TODO Auto-generated method stub
+		if(!Utility.isNotNull(root)) {
+			return;
+		}
+		printBst(root.getLeft());
+		Utility.Print(root.getValue());
 		printBst(root.getRight());
 	}
 }
